@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ifscApi/__init__.py
+ifscApi/app.py
+ifscApi/getDetails.py
+ifscApi/getDetailsLambda.py
+ifscApi/ifsc2.db
+ifscApi.egg-info/PKG-INFO
+ifscApi.egg-info/SOURCES.txt
+ifscApi.egg-info/dependency_links.txt
+ifscApi.egg-info/requires.txt
+ifscApi.egg-info/top_level.txt
+ifscApi/db/ifsc.db
+ifscApi/templates/index.html

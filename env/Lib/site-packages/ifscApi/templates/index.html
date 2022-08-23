@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>IFSC</title>
+  </head>
+  <body>
+    <div class="container rounded p-3 my-3 bg-dark text-white">
+      <h1>Bank Details w.r.t IFSC code</h1>
+      <form action="/getit" method="post">
+        <div class="form-group">
+          <label for="ifsc">IFSC CODE:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ifsc"
+            name="ifsc"
+            placeholder="{{ifsc}}"
+          />
+        </div>
+        <!-- <input type="submit" class="btn btn-primary" onclick="retrievedata()" /> -->
+        <div class="form-group">
+          <label for="bank_name">Bank Name:</label>
+          <input
+            type="text"
+            name="bank_name"
+            id="bank_name"
+            class="form-control"
+            placeholder="{{bank}}"
+            readonly="readonly"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bank_address">Bank Address:</label>
+          <input
+            type="text"
+            name="bank_address"
+            id="bank_address"
+            class="form-control"
+            placeholder="{{add}}"
+            readonly="readonly"
+          />
+        </div>
+        <button type="submit">OK</button>
+      </form>
+    </div>
+  </body>
+  <!-- <script type="text/javascript">
+    function retrievedata() {
+      var ifsccode = document.getElementById("ifsc").value;
+      fetch("data.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          // Work with JSON data here
+          if (ifsccode == data["IFSC"]) {
+            a = data["BANK"];
+            b = data["ADDRESS"];
+            console.log(a, " ", b);
+            document.getElementById("bank_name").value = a;
+            document.getElementById("bank_address").value = b;
+          }
+        })
+        .catch((err) => {
+          // Do something for an error here
+        });
+    }
+  </script> -->
+</html>
